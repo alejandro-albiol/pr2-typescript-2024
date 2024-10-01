@@ -1,4 +1,5 @@
-import { Car } from "./Car";
+import { Car } from "./Car.js";
+import { Park } from "./Park.js";
 
 interface ILogPark{
     logParkingCheckin(car:Car,park:Park):void;
