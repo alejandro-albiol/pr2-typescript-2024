@@ -6,6 +6,17 @@ import { RegularCar } from "./RegularCar.js";
 import { RegularPark } from "./RegularPark.js";
 
 const parking = new Park();
+
+document.querySelector("#newOfficialCarEntry")!.addEventListener("click", ()=>{
+    const promptResponse:string|null = prompt("Dame la matrícula del coche que quieres crear");
+    const plate:string = promptResponse?promptResponse:"";
+    let newOfficialCar = new OfficialCar(plate);
+    parking.addOfficialCar(newOfficialCar);
+    console.log(parking);
+} )
+
+
+/*const parking = new Park();
 const car1 = new RegularCar("7929-KVD");
 const car2 = new OfficialCar("3344-ZDB");
 parking.addOfficialCar(car2);
@@ -18,4 +29,4 @@ OfficialPark1.logParkingCheckin(parkLogEntry2, parking);
 parkLogEntry2.checkOutDate = Date.now();
 console.log(parkLogEntry1.print());
 console.log(parkLogEntry2.print());
-console.log(parking);
+console.log(parking);*/
