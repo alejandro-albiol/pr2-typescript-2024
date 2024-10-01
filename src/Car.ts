@@ -2,7 +2,7 @@ export class Car {
 
     #plate: string;
 
-    constructor(plate: string, type: string){
+    constructor(plate: string){
         this.#plate = plate;
     }
 
